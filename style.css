@@ -1,0 +1,134 @@
+/* Mobile First Design */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f8f2;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6b8e73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #dce8d4;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    color: #4a6653;
+}
+
+img,
+picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin: 15px 0;
+}
+
+input[type="submit"] {
+    background-color: #6b8e73;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+input[type="submit"]:hover {
+    background-color: #55725d;
+}
+
+footer {
+    background-color: #6b8e73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Flexbox Layout */
+
+.schedule-container,
+.class-container,
+.workshop-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Media Query */
+
+@media (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .schedule-container,
+    .class-container,
+    .workshop-container {
+        flex-direction: row;
+    }
+
+    section {
+        max-width: 1100px;
+        margin: 20px auto;
+    }
+}
