@@ -78,3 +78,61 @@ document
 });
 
 loadPreference();
+const form =
+document.getElementById("interestForm");
+
+form.addEventListener(
+    "submit",
+    validateForm
+);
+
+function validateForm(event) {
+
+    let valid = true;
+
+    clearErrors();
+
+    const name =
+        document.getElementById("name");
+
+    const email =
+        document.getElementById("email");
+
+    if(name.value.trim().length < 2) {
+
+        document.getElementById(
+            "nameError"
+        ).textContent =
+        "Name must be at least 2 characters.";
+
+        valid = false;
+    }
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email.value)) {
+
+        document.getElementById(
+            "emailError"
+        ).textContent =
+        "Please enter a valid email address.";
+
+        valid = false;
+    }
+
+    if(!valid) {
+        event.preventDefault();
+    }
+}
+
+function clearErrors() {
+
+    document.getElementById(
+        "nameError"
+    ).textContent = "";
+
+    document.getElementById(
+        "emailError"
+    ).textContent = "";
+}
