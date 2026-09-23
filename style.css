@@ -132,3 +132,16 @@ footer {
         margin: 20px auto;
     }
 }
+.error {
+    color: #c62828;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+#recommendation {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f5f8f2;
+    border-left: 4px solid #6b8e73;
+}
